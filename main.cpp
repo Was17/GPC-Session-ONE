@@ -58,10 +58,11 @@ void funDisplay() {
     
  // Borramos el buffer de color
     glClearColor( 
-    0.5,  0.5,  0.5, 0.0);
+  1.0,1.0,1.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    //glColor3f(0.8, 0.2, 0.1); 
+    //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
+    glColor3f(0.0, 0.0, 0.0); 
     
  // Dibujamos una tetera con modelo de alambre
     glutWireTeapot(0.5f);
