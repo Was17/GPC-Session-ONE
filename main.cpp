@@ -62,11 +62,20 @@ void funDisplay() {
     glClear(GL_COLOR_BUFFER_BIT);
     
     //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
-    glColor3f(0.0, 0.0, 0.0); 
+    glColor3f(0.25 ,0.88, 0.82); 
     
  // Dibujamos una tetera con modelo de alambre
     glutWireTeapot(0.5f);
+     //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
+    glColor3f(0.55 ,0 ,0); 
     
+ // Dibujamos una tetera con modelo de alambre
+    glutWireTeapot(0.3f);
+     //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
+    glColor3f(0.5 ,1 ,0); 
+    
+ // Dibujamos una tetera con modelo de alambre
+    glutWireTeapot(0.1f);
  // Intercambiamos los buffers
     glutSwapBuffers();
     
