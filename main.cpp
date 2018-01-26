@@ -51,17 +51,17 @@ void initFunc() {
 void funReshape(int w, int h) {
     
     printf("Dimensiones %dx%d pixeles\n", w, h);
-    
+   //glScalef(w/500.0, h/500.0, 1.0f);
 }
 
 void funDisplay() {
     
  // Borramos el buffer de color
     glClearColor( 
-    0.0,  0.0,  0.0, 0.0);
+    0.5,  0.5,  0.5, 0.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
- 
+    //glColor3f(0.8, 0.2, 0.1); 
     
  // Dibujamos una tetera con modelo de alambre
     glutWireTeapot(0.5f);
