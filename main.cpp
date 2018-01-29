@@ -2,6 +2,8 @@
 #include <GL/freeglut.h>
 #include <stdio.h>
 
+float red,green,blue,light;
+float sizeTeapot;
 void initFunc();
 void funReshape(int w, int h);
 void funDisplay();
@@ -49,33 +51,30 @@ void initFunc() {
 }
 
 void funReshape(int w, int h) {
-    
+      
     printf("Dimensiones %dx%d pixeles\n", w, h);
+    red=w/1000.0f;
+    green=h/1000.0f;
+    blue=w/500.0f-h/500.0f;
+    sizeTeapot=w/2000.0f+h/2000.0f;
    //glScalef(w/500.0, h/500.0, 1.0f);
 }
 
 void funDisplay() {
+    
     
  // Borramos el buffer de color
     glClearColor( 
   1.0,1.0,1.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
-    glColor3f(0.25 ,0.88, 0.82); 
-    
- // Dibujamos una tetera con modelo de alambre
-    glutSolidTeapot(0.5f);
+   
      //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
-    glColor3f(0.55 ,0 ,0); 
+    glColor3f(red,green,blue); 
     
  // Dibujamos una tetera con modelo de alambre
-    glutSolidTeapot(0.3f);
-     //SE APLICA COLOR A LO QUE SE VAYA A DIBUJAR
-    glColor3f(0.5 ,1 ,0); 
-    
- // Dibujamos una tetera con modelo de alambre
-    glutSolidTeapot(0.1f);
+    glutWireTeapot(sizeTeapot);
+
  // Intercambiamos los buffers
     glutSwapBuffers();
     
